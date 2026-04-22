@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3a2sgehaqjdt"]
+[gd_scene format=3 uid="uid://d3a2sgehaqjdt"]
 
-[ext_resource type="PackedScene" uid="uid://beg452kqkfydx" path="res://Scenes/Player.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://beg452kqkfydx" path="res://scenes/Player.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://cbrrsfnbg3p0g" path="res://scenes/Spawner.tscn" id="1_yaxqa"]
-[ext_resource type="Texture2D" uid="uid://r37ts0nyebjk" path="res://Assets/Familiar Looking Rocket.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://r37ts0nyebjk" path="res://assets/Familiar Looking Rocket.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://dd7fcijo64bic" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_gr_planet.png" id="4_8s0ta"]
-[ext_resource type="PackedScene" path="res://scenes/Area Trigger.tscn" id="4_t7cob"]
+[ext_resource type="PackedScene" uid="uid://cenr5u61runto" path="res://scenes/Area Trigger.tscn" id="4_t7cob"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_we7op"]
 texture = ExtResource("4_8s0ta")
@@ -42,24 +42,24 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_we7op")
 
-[node name="Level 1" type="Node2D"]
+[node name="Level 1" type="Node2D" unique_id=1240181193]
 
-[node name="Spawner" parent="." instance=ExtResource("1_yaxqa")]
+[node name="Spawner" parent="." unique_id=1851270434 instance=ExtResource("1_yaxqa")]
 position = Vector2(734, 90)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=582434126]
 position = Vector2(2170.27, 73.2836)
 texture = ExtResource("3")
 
-[node name="Area3D Trigger" parent="Sprite2D" instance=ExtResource("4_t7cob")]
+[node name="Area3D Trigger" parent="Sprite2D" unique_id=1737777321 instance=ExtResource("4_t7cob")]
 
-[node name="Area3D Trigger2" parent="." instance=ExtResource("4_t7cob")]
+[node name="Area3D Trigger2" parent="." unique_id=1519389453 instance=ExtResource("4_t7cob")]
 position = Vector2(2170.27, 73.2836)
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=428632459]
 tile_set = SubResource("TileSet_5i4ah")
 format = 2
-layer_0/tile_data = PackedInt32Array(196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 131079, 0, 0, 65543, 0, 0, 131080, 0, 0, 65540, 0, 0, 65541, 0, 0)
+layer_0/tile_data = PackedInt32Array(131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 131079, 0, 0, 65543, 0, 0, 131080, 0, 0, 65540, 0, 0, 65541, 0, 0, 196607, 0, 0, 131072, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 131068, 0, 0, 196600, 0, 0, 131067, 0, 0, 196599, 0, 0)
 
-[node name="Player" parent="." instance=ExtResource("1")]
-position = Vector2(135.152, 106.001)
+[node name="Player" parent="." unique_id=166191722 instance=ExtResource("1")]
+position = Vector2(-1077, 64)

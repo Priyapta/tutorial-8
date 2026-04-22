@@ -1,8 +1,11 @@
 res://default_env.tres
 res://Scenes/Level 1.tscn
-res://Scripts/Player.gd
 res://Scenes/Player.tscn
-res://Scripts/Enemy.gd
-res://Scenes/Enemy.tscn
-res://Scripts/Area2D.gd
 res://scenes/Spawner.tscn
+res://scenes/Area Trigger.tscn
+res://Scripts/Area2D.gd
+res://scenes/Enemy.tscn
+res://scripts/Enemy.gd
+res://scripts/Player.gd
+res://scripts/AreaTrigger.gd
+res://scripts/Spawner.gd
