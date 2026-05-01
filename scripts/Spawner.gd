@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var spawn_rate: float = 0.3
+@export var spawn_rate: float = 5
 
 var current_time = 0
 

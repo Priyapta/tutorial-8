@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://djpootugy4fyc" path="res://scripts/Player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://d2oej36eq8vvl" path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_alien.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dpnuijhsx0eak" path="res://assets/kenney_platformerpack/PNG/Particles/brickGrey_small.png" id="3_gntrk"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(52.924, 76.884)
@@ -61,6 +62,16 @@ _data = {
 &"Walk": SubResource("4")
 }
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dewec"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(30, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, -100, 0)
+
 [node name="Player" type="CharacterBody2D" unique_id=354923017]
 script = ExtResource("1_kyqiw")
 
@@ -72,9 +83,14 @@ position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2")
 hframes = 4
-frame = 2
+frame = 3
 
 [node name="Animator" type="AnimationPlayer" parent="." unique_id=58712590]
 libraries/ = SubResource("AnimationLibrary_mtsb7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=622094757]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1286321619]
+position = Vector2(0, 40)
+texture = ExtResource("3_gntrk")
+process_material = SubResource("ParticleProcessMaterial_dewec")

@@ -5,11 +5,13 @@ const UP = Vector2(0, -1)
 @export var speed: int = -400
 @export var gravity: int = 1200
 
+func _on_hitbox_body_entered(body):
+	if body.name == "Player" and body.has_method("take_damage"):
+		body.take_damage()
 
 func _process(_delta):
 	if position.y >= 600:
 		queue_free()
-
 
 func _physics_process(delta):
 	velocity.y += delta * gravity
